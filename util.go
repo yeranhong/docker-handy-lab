@@ -35,3 +35,13 @@ func Clamp(v, lo, hi int) int {
 	}
 	return v
 }
+
+// Contains reports whether xs includes v.
+func Contains(xs []string, v string) bool {
+	for _, x := range xs {
+		if x == v {
+			return true
+		}
+	}
+	return false
+}
