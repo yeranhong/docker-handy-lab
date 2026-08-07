@@ -45,3 +45,12 @@ func Contains(xs []string, v string) bool {
 	}
 	return false
 }
+
+// SumInts returns the sum of xs.
+func SumInts(xs []int) int {
+	total := 0
+	for _, x := range xs {
+		total += x
+	}
+	return total
+}
