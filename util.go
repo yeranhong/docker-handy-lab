@@ -54,3 +54,16 @@ func SumInts(xs []int) int {
 	}
 	return total
 }
+
+// Unique returns xs with duplicates removed, keeping order.
+func Unique(xs []string) []string {
+	seen := map[string]bool{}
+	out := make([]string, 0, len(xs))
+	for _, x := range xs {
+		if !seen[x] {
+			seen[x] = true
+			out = append(out, x)
+		}
+	}
+	return out
+}
